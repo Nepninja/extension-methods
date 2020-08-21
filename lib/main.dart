@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:extension_methods/extensions/collection_extensions.dart';
+import 'package:extension_methods/extensions/string_extension.dart';
+import 'package:extension_methods/extensions/collection_extension.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,8 +29,10 @@ class HomePage extends StatelessWidget {
     List<String> names = ["Ram", "Jack", "Jill"];
     print(
         "separated values ${names.joinToString(", ", prefix: "", postfix: " are students at MIT")}");
-    return Scaffold(
-      body: Text("Hello Extensions!"),
+    return SafeArea(
+      child: Scaffold(
+        body: Text("Hello Extensions!"),
+      ),
     );
   }
 }
